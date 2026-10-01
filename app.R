@@ -14,7 +14,7 @@ rsconnect::writeManifest()
 PISA_dataset_mean2.2 <- read_excel("PISA_linear_dataset.xlsx")
 
 ui <- fluidPage(
-  titlePanel("Linear Regression with Group Selection: Academic Achievements of 15-Year-Olds by Country"),
+  titlePanel("Multiple Linear Regression with Group Selection: Academic Achievements of 15-Year-Olds by Country"),
   sidebarPanel(
     # Select response variable (Y)
     selectInput("dep_var", "Dependent Variable (Y):", 
@@ -40,23 +40,23 @@ ui <- fluidPage(
     nav_panel("Variables",
               wellPanel(
                 h4("Dependent Variable Definitions"),
-                p(strong("score_sci_avg:"), " Average science achivement score (Numeric variable)."),
-                p(strong("score_math_avg:"), " Average math achivement score (Numeric variable)."),
+                p(strong("score_sci_avg:"), " Average science achievement score (Numeric variable)."),
+                p(strong("score_math_avg:"), " Average math achievement score (Numeric variable)."),
                 p(strong("score_env_avg:"), " Average environmental awareness score (Numeric variable)."),
                 p(strong("score_read_avg:"), " Average reading score (Numeric variable)."),
                 h4("Independent Variable Definitions"),
                 p(strong("MALE:"), " Student's gender (Categorical variable)."),
-                p(strong("ESCS:"), " HEconomic, Social, and Cultural Index (Numeric variable)."),
+                p(strong("ESCS:"), " Economic, social, and cultural index (Numeric variable)."),
                 p(strong("HISEI:"), " Highest parental occupational status (Numeric variable)."),
-                p(strong("FAMSUP:"), " Student's percetion of family support (Numeric variable)."),
+                p(strong("FAMSUP:"), " Student's perception of family support (Numeric variable)."),
                 p(strong("TEACHSUP:"), " Teacher's support in science class (Numeric variable)."),                  
                 p(strong("COGABIL:"), " Cognitive adaptability (Numeric variable)."),
                 p(strong("EFFSCIE:"), " Science self-efficacy (Numeric variable)."),
-                p(strong("ENVAPART:"), " Students' participation in environment-related activities (Numeric variable)."),     
+                p(strong("ENVAPART:"), " Student's participation in environment-related activities (Numeric variable)."),     
                 p(strong("SELFREG:"), " Self-regulation (Numeric variable)."),
                 p(strong("GOALSET:"), " Goal setting (Numeric variable)."),
-                p(strong("BULLIED:"), " Sense of beloning (Numeric variable)."),                  
-                p(strong("BELONG:"), " Sense of beloning (Numeric variable)."),
+                p(strong("BULLIED:"), " Student reports on bullying  (Numeric variable)."),                  
+                p(strong("BELONG:"), " Sense of belonging (Numeric variable)."),
                 p(strong("DISCLISCI:"), " Disciplinary climate at schools (Numeric variable).")
               ))
   )
